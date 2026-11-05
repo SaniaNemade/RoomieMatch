@@ -12,7 +12,10 @@ const messageSchema = new mongoose.Schema(
       ref: 'User',
       required: true,
     },
-   
+    text: {
+      type: String,
+      default: '', // Can be empty if it's just media
+    },
     type: {
       type: String,
       enum: ['text', 'image', 'video', 'audio', 'file', 'system'],
